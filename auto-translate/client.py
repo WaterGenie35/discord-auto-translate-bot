@@ -1,4 +1,6 @@
 import discord
+from custom_types import ServerLinks
+from custom_types import Language
 
 class AutoTranslateClient(discord.Client):
 
