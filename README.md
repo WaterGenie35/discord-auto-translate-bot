@@ -8,6 +8,29 @@
 For simplicity, this bot does not perform language detection and simply assume all messages in source channel to be in the source language.
 The translation is handled by the google cloud translation api.
 
+## Setup
+
+```bash
+$ cd /path/to/discord-auto-translate-bot
+$ virtualenv venv
+$ source venv/bin/activate
+$ pip3 install -r requirements.txt
+```
+
+* Add bot token and google cloud details as in `.env.example`.
+* Add google cloud service account credential file as in `google-service-account-credentials.json.example`.
+
+## Run
+
+```bash
+$ source venv/bin/activate
+$ python3 auto-translate/bot.py
+```
+
+## Discord Commands
+
+* TO-DO
+
 ## Resources and Links
 
 * [Google Cloud Documentations](https://cloud.google.com/docs)
