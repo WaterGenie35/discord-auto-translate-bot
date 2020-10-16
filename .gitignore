@@ -2,6 +2,12 @@
 venv
 .env
 
+# Credentials
+google-service-account-credentials.json
+
 # Python
 __pycache__
-.pyc
+*.pyc
+
+# Misc.
+*.sw[po]
