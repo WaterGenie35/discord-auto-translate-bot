@@ -8,6 +8,10 @@ class Language(Enum):
     ENGLISH = 'en'
     RUSSIAN = 'ru'
 
+    @property
+    def code(self):
+        return self.value
+
 Name = str
 Id = int
 Server = Tuple[Name, Id]
