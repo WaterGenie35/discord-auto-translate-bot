@@ -1,5 +1,4 @@
 import os
-from google.cloud import translate
 from google.cloud.translate import TranslationServiceClient
 from custom_types import Language
 
