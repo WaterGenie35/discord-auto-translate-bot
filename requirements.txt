@@ -8,6 +8,7 @@ discord.py==1.5.0
 google-api-core==1.22.4
 google-auth==1.22.1
 google-cloud-core==1.4.3
+google-cloud-monitoring==2.0.0
 google-cloud-translate==3.0.1
 googleapis-common-protos==1.52.0
 grpcio==1.32.0
