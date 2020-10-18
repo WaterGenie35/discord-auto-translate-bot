@@ -12,6 +12,14 @@ class Language(Enum):
     def code(self):
         return self.value
 
+    @staticmethod
+    def from_string(string: str):
+        string = string.lower()
+        if string in ["e", "en", "eng", "english"]:
+            return Language.ENGLISH
+        if string in ["r", "ru", "rus", "russian"]:
+            return Language.RUSSIAN
+
 Name = str
 Id = int
 Server = Tuple[Name, Id]
