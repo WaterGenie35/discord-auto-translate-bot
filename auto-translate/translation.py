@@ -11,7 +11,7 @@ class TranslationService:
         )
         self.project_id = os.getenv('GOOGLE_PROJECT_ID')
         self.location = os.getenv('GOOGLE_SERVICE_LOCATION')
-        print("Google translation service initialised!")
+        print("Google translation service initialised.")
 
     def translate(self, source:Language, target:Language, content:str) -> str:
         resource = f'projects/{self.project_id}/locations/{self.location}'
