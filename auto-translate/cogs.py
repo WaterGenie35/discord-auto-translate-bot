@@ -39,6 +39,18 @@ class AutoTranslateCog(commands.Cog, name="Auto-translate"):
                 message)
         await context.channel.send(translation)
 
+    @commands.command(name='quota', aliases=['quotas', 'check', 'chk'])
+    @commands.has_permissions(manage_channels=True)
+    async def check_quota(self, context):
+        "Checks how many characters have been translated this month"
+        quota = self.service.get_monthly_quota()
+        await context.channel.send(f"{quota:,}")
+
+    @check_quota.error
+    async def check_quota_error(self, context, error):
+        # Normal users don't need to know that these commands exist
+        pass
+
     @commands.group(name='link', invoke_without_command=True)
     @commands.has_permissions(manage_channels=True)
     async def link(self, context):
@@ -68,4 +80,5 @@ class AutoTranslateCog(commands.Cog, name="Auto-translate"):
     @create_link.error
     @delete_link.error
     async def link_error(self, context, error):
+        # Normal users don't need to know that these commands exist
         pass
